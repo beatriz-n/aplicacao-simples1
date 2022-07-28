@@ -8,31 +8,18 @@
       <button class="btn btn-primary input-group-btn">Adicionar</button>
     </div>
      <div class="todo-list">
-        <div class="tile flex-centered" v-for="t in todos" :key="t.id">
-          <div class="tile-icon">
-            <div>
-            <i class="icon icon-time "></i>
-            </div>
-          </div>
-        <dir class="tile-content">
-          <div class="tile-subtitle">{{t.description}}</div>
-        </dir>
-        <div class="tile-action">
-          <button class="btn btn-link">Concluir</button>
-          <button class="btn btn-link">
-            <span class="text-error">Remover</span>
-          </button>
-          </div>
-        </div>
+        <todo v-for="t in todos" :key="t.id" :todo="t"/>
      </div>
   </form>
 </div>
 </template>
 
 <script>
+import todo from './components/todo-temp'
+
 export default {
   name: 'app',
-  components: {},
+  components: { todo },
   data () {
     return { todos: [], todo: { checked: false } }
   },
