@@ -29,6 +29,6 @@ export default {
 <style scoped>
 .checked{
     text-decoration: line-through;
-    color: white;
+    color: red;
 }
 </style>

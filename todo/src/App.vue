@@ -6,7 +6,7 @@
       <div><b>Digite lembretes:</b></div>
       <form @submit.prevent="addTodo(todo)">
         <div class="input-group">
-          <input type="text" v-model="todo.description" class="form-input" placeholder="Novo todo">
+          <input type="text" v-model="todo.description" class="form-input" placeholder="Nova tarefa">
           <button class="btn btn-primary input-group-btn">Adicionar</button>
         </div>
       </form>
